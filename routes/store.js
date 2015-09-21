@@ -3,8 +3,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    console.log(process.env.message_url)
-  res.render('store', { title: 'Store', messageURL: process.env.message_url});
+  res.render('store', { title: 'Store', baseURL: process.env.base_url});
 });
 
 router.route('/message').post(function(req, res, next) {

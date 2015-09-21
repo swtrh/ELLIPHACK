@@ -3,6 +3,6 @@ extends layout
 block content
   h1= title
   p Hey this is your #{title} page
-  form(action='#{messageURL}', method='Post')
+  form(action='#{baseURL}/store/message', method='Post')
     input(type="text", name="message", placeholder="Enter a message", size="40")
     input(type='submit', name='submit', value='Submit')
